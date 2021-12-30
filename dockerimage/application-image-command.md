@@ -13,7 +13,7 @@ docker build . -t mybatisdemo:1.0
 ```
 docker run --name mybatisdemo-container -p 8080:8080 \
 -e app_name=mybatisdemo \
--d mybatisdemo:1.0
+-d includeno/springboot_mybatisplus_mysql_demo:single_table_withxml
 ```
 
 ## inspect
@@ -33,5 +33,5 @@ docker rm mysql-container
 
 ## remove image
 ```
-docker image rm mysql:5.7.33
+docker image rm includeno/springboot_mybatisplus_mysql_demo_single_table_withxml:1.0
 ```
