@@ -8,10 +8,6 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
-/**
- * user
- * @author 
- */
 @Data
 @Accessors(chain = true)
 public class User implements Serializable {
