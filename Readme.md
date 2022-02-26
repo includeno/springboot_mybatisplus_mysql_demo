@@ -16,11 +16,11 @@ Docker MySQL官网 https://hub.docker.com/_/mysql
 
 SpringBoot 2.4.13
 
-mybatis-plus-boot-starter 3.0.5
+mybatis-plus-boot-starter 3.5.1
 
-mybatis-plus-extension 3.1.0
+mybatis-plus-extension 3.5.1
 
-mybatis-plus-generator 3.0.5
+mybatis-plus-generator 3.5.1
 
 ## mysql 环境配置 /environment-docker-compose/mysql5.7/docker-compose-command.md
 拉取镜像
@@ -46,65 +46,72 @@ docker-compose -f docker-compose-mysql.yml up -d
 
 ```
 .
+├── .github
+│ └── workflows
+│     └── dockerimage.yml
+├── .gitignore
+├── Dockerfile
 ├── Exceptions.md
 ├── HELP.md
 ├── LICENSE
 ├── Readme.md
-├── Dockerfile (镜像定义文件)
-├── dockerimage（docker生成服务镜像的指令）
-│   └── application-image-command.md
-├── environment-docker （docker运行MySQL的指令）
-│   ├── mysql5.7
-│   │   └── docker-command.md
-│   └── mysql8
-│       └── docker-command.md
-├── environment-docker-compose （docker-compose运行MySQL的指令）
-│   ├── mysql5.7
-│   │   ├── docker-compose-command.md
-│   │   └── docker-compose-mysql.yml
-│   └── mysql8
-│       ├── docker-compose-command.md
-│       └── docker-compose-mysql.yml
-├── mvnw
-├── mvnw.cmd
-├── mybatisplusdemo.iml
+├── dockerimage
+│ └── application-image-command.md
+├── environment-docker
+│ ├── mysql5.7
+│ │ └── docker-command.md
+│ └── mysql8
+│     └── docker-command.md
+├── environment-docker-compose
+│ ├── mysql5.7
+│ │ ├── docker-compose-command.md
+│ │ └── docker-compose-mysql.yml
+│ └── mysql8
+│     ├── docker-compose-command.md
+│     └── docker-compose-mysql.yml
 ├── pom.xml
 ├── sql
-│   ├── demo.sql
-│   └── init.sql
-└── src
-    ├── main
-    │   ├── java
-    │   │   └── com
-    │   │       └── example
-    │   │           └── demo
-    │   │               ├── MainApplication.java
-    │   │               ├── config
-    │   │               ├── controller
-    │   │               │   ├── MainController.java
-    │   │               │   └── UserController.java
-    │   │               ├── entity
-    │   │               │   └── User.java
-    │   │               ├── mapper
-    │   │               │   └── UserMapper.java
-    │   │               └── service
-    │   │                   ├── UserService.java
-    │   │                   └── UserServiceImpl.java
-    │   └── resources
-    │       ├── application.properties
-    │       ├── mapperxml
-    │       ├── static
-    │       └── templates
-    └── test
-        └── java
-            └── com
-                └── example
-                    └── demo
-                        ├── DemoApplicationTests.java
-                        ├── controller
-                        │   └── MainControllerTest.java
-                        └── mapper
-                            └── UserMapperTest.java
+│ └── user.sql
+├── src
+│ ├── .DS_Store
+│ ├── main
+│ │ ├── java
+│ │ │ └── com
+│ │ │     └── example
+│ │ │         └── demo
+│ │ │             ├── MainApplication.java
+│ │ │             ├── controller
+│ │ │             │ ├── UserMapperController.java
+│ │ │             │ └── UserServiceController.java
+│ │ │             ├── entity
+│ │ │             │ └── User.java
+│ │ │             ├── mapper
+│ │ │             │ └── UserMapper.java
+│ │ │             ├── service
+│ │ │             │ ├── UserService.java
+│ │ │             │ └── UserServiceImpl.java
+│ │ │             └── util
+│ │ │                 └── GenObj.java
+│ │ └── resources
+│ │     ├── application-local.properties
+│ │     ├── application.properties
+│ │     ├── mapperxml
+│ │     │ └── UserMapper.xml
+│ │     ├── static
+│ │     └── templates
+│ └── test
+│     └── java
+│         └── com
+│             └── example
+│                 └── demo
+│                     ├── DemoApplicationTests.java
+│                     ├── controller
+│                     │ └── MainControllerTest.java
+│                     ├── mapper
+│                     │ └── UserMapperTest.java
+│                     └── service
+│                         └── UserServiceTest.java
+
 ```
 
 ## maven dependencies 依赖

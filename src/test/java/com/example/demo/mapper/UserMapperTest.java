@@ -38,7 +38,7 @@ public class UserMapperTest {
     @Transactional
     @Rollback
     public void select_test(){
-        //demo.sql
+        //user.sql
         List<User> result = userMapper.selectList(null);
         assert result.size()==3;
     }

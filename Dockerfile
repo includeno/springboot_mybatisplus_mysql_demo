@@ -1,4 +1,4 @@
-FROM openjdk:11.0.10-jdk
+FROM openjdk:11.0.13-jdk
 
 EXPOSE 8080
 WORKDIR /app

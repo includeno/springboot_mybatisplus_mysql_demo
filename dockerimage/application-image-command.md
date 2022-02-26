@@ -18,17 +18,17 @@ docker run --name mybatisdemo-container -p 8080:8080 \
 
 ## inspect
 ```
-docker logs mysql-container
+docker logs mybatisdemo-container
 
-docker logs mysql-container > /root/mysql.log
+docker logs mybatisdemo-container > /root/mysql.log
 
-docker exec -it mysql-container bash
+docker exec -it mybatisdemo-container bash
 ```
 
 ## stop & remove container
 ```
-docker stop mysql-container
-docker rm mysql-container
+docker stop mybatisdemo-container
+docker rm mybatisdemo-container
 ```
 
 ## remove image
